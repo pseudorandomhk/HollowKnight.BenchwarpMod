@@ -5,6 +5,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 using Benchwarp.CanvasUtil;
+using USceneManager = UnityEngine.SceneManagement.SceneManager;
 
 namespace Benchwarp
 {
@@ -406,7 +407,29 @@ namespace Benchwarp
             if (gs.ShowScene)
             {
                 sceneNamePanel.SetActive(true, false);
-                sceneNamePanel.GetText("SceneName").UpdateText(Events.GetSceneName(GameManager.instance.sceneName));
+                
+                string sceneNames = Events.GetSceneName(GameManager.instance.sceneName);
+                int nLines = 1;
+                var sceneText = sceneNamePanel.GetText("SceneName");
+
+                if (gs.MaxSceneNames > 1)
+                {
+                    for (int i = 1; i < Math.Min(gs.MaxSceneNames, USceneManager.sceneCount); i++)
+                    {
+                        sceneNames += "\n" + USceneManager.GetSceneAt(i).name;
+                        nLines++;
+                    }
+
+                    if (USceneManager.sceneCount > gs.MaxSceneNames)
+                    {
+                        sceneNames += $"\n(+ {USceneManager.sceneCount - gs.MaxSceneNames} more)";
+                        nLines++;
+                    }
+                    
+                    sceneText.SetPosition(new Vector2(5f, 1080f - 20 * nLines));
+                }
+                
+                sceneText.UpdateText(sceneNames);
             }
             else sceneNamePanel.SetActive(false, true);
 

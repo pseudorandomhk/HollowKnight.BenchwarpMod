@@ -22,6 +22,7 @@ namespace Benchwarp
         public bool WarpOnly = false;
         public bool UnlockAllBenches = false;
         public bool ShowScene = false;
+        public int MaxSceneNames = 10;
         public bool SwapNames = false;
         public bool EnableDeploy = true;
         public bool AlwaysToggleAll = false;
