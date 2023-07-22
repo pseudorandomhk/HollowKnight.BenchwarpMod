@@ -8,8 +8,8 @@ namespace Benchwarp
         /// <summary>
         /// The current list of letter hotkey codes, accounting for hotkey overrides.
         /// </summary>
-        public static ReadOnlyDictionary<string, int> CurrentHotkeys { get; } = new(_hotkeys = new());
-        private static readonly Dictionary<string, int> _hotkeys;
+        private static readonly Dictionary<string, int> _hotkeys = new();
+        public static Dictionary<string, int> CurrentHotkeys { get; } = new(_hotkeys);
         private static readonly Dictionary<int, Action> _customHotkeyActions = new();
 
         public static void RefreshHotkeys()

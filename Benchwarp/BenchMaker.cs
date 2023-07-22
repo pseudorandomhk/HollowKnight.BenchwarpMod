@@ -1,4 +1,5 @@
 ﻿using HutongGames.PlayMaker;
+using Modding.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,7 +46,7 @@ namespace Benchwarp
             FsmState idle = bench.LocateMyFSM("Bench Control").FsmStates.First(s => s.Name == "Idle");
             if (noninteractive)
             {
-                idle.Transitions = Array.Empty<FsmTransition>();
+                idle.Transitions = ArrayExtensions.Empty<FsmTransition>();
             }
             else
             {
@@ -55,7 +56,7 @@ namespace Benchwarp
                     new FsmTransition
                     {
                         FsmEvent = FsmEvent.GetFsmEvent("IN RANGE"),
-                        ToFsmState = idle.Fsm.States.FirstOrDefault(f => f.Name == "In Range"),
+                        // ToFsmState = idle.Fsm.States.FirstOrDefault(f => f.Name == "In Range"),
                         ToState = "In Range",
                     }
                 };

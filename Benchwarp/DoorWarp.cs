@@ -65,8 +65,15 @@ namespace Benchwarp
         public bool IsInvalid() => door == null || room == null;
     }
 
-    public record Door(DoorTarget Self, DoorTarget Target, string Area, OneWay OneWay);
-
+    // public record Door(DoorTarget Self, DoorTarget Target, string Area, OneWay OneWay);
+    public struct Door
+    {
+        public DoorTarget Self;
+        public DoorTarget Target;
+        public string Area;
+        public OneWay OneWay;
+    }
+    
     public static class DoorWarp
     {
         public static Door[] Doors;

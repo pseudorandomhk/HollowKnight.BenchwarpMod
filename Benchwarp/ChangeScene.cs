@@ -1,6 +1,7 @@
 ﻿using GlobalEnums;
 using Modding;
 using System.Collections;
+using Modding.Utils;
 using UnityEngine;
 
 namespace Benchwarp
@@ -35,7 +36,7 @@ namespace Benchwarp
             // Set some stuff which would normally be set by LoadSave
             HeroController.instance.AffectedByGravity(false);
             HeroController.instance.transitionState = HeroTransitionState.EXITING_SCENE;
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
                 if (HeroController.instance.cState.onConveyor || HeroController.instance.cState.onConveyorV || HeroController.instance.cState.inConveyorZone)
                 {
@@ -54,7 +55,7 @@ namespace Benchwarp
             // Actually respawn the character
             GameManager.instance.SetPlayerDataBool(nameof(PlayerData.atBench), false);
             // Allow the player to have control if they warp to a non-bench while diving or cdashing
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
                 HeroController.instance.cState.superDashing = false;
                 HeroController.instance.cState.spellQuake = false;
@@ -72,7 +73,7 @@ namespace Benchwarp
 
             // Restore various things normally handled by exiting the pause menu. None of these are necessary afaik
             GameCameras.instance.ResumeCameraShake();
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
                 HeroController.instance.UnPause();
             }
@@ -89,10 +90,10 @@ namespace Benchwarp
         public static void OnBenchwarpCleanup()
         {
             // reset some things not cleaned up when exiting dream sequences, etc
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
-                HeroController.SilentInstance.takeNoDamage = false;
-                if (!BenchMaker.IsDreamRoom() && HeroController.SilentInstance.proxyFSM?.FsmVariables?.FindFsmBool("No Charms") is HutongGames.PlayMaker.FsmBool noCharms) noCharms.Value = false;
+                SilentInstances.HeroController.takeNoDamage = false;
+                if (!BenchMaker.IsDreamRoom() && SilentInstances.HeroController.proxyFSM?.FsmVariables?.FindFsmBool("No Charms") is HutongGames.PlayMaker.FsmBool noCharms) noCharms.Value = false;
             }
             if (HutongGames.PlayMaker.FsmVariables.GlobalVariables.FindFsmBool("Is HUD Out") is HutongGames.PlayMaker.FsmBool hudOut && hudOut.Value)
             {
@@ -108,7 +109,7 @@ namespace Benchwarp
             GameManager.instance.FadeSceneIn();
             GameManager.instance.isPaused = false;
             GameCameras.instance.ResumeCameraShake();
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
                 HeroController.instance.UnPause();
             }
@@ -116,13 +117,13 @@ namespace Benchwarp
             TimeController.GenericTimeScale = 1f;
             GameManager.instance.actorSnapshotUnpaused.TransitionTo(0f);
             GameManager.instance.ui.AudioGoToGameplay(.2f);
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
                 HeroController.instance.UnPause();
             }
             MenuButtonList.ClearAllLastSelected();
             PlayerData.instance.atBench = false; // kill bench storage
-            if (HeroController.SilentInstance != null)
+            if (SilentInstances.HeroController != null)
             {
                 if (HeroController.instance.cState.onConveyor || HeroController.instance.cState.onConveyorV || HeroController.instance.cState.inConveyorZone)
                 {
