@@ -1,4 +1,4 @@
-﻿using Modding.Utils;
+﻿using static Shims.NET.System.IO.Stream;
 using UnityEngine;
 
 namespace Benchwarp

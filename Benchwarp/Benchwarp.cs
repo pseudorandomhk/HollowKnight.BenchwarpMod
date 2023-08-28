@@ -1,8 +1,8 @@
 ﻿using Modding;
 using System.Reflection;
-using Modding.Utils;
 using UnityEngine;
 using UnityEngine.UI;
+using static Shims.NET.System.Reflection.MemberInfo;
 
 namespace Benchwarp
 {

@@ -1,7 +1,8 @@
 ﻿using HutongGames.PlayMaker;
-using Modding.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+using Array = Shims.NET.System.Array;
 
 namespace Benchwarp
 {
@@ -46,7 +47,7 @@ namespace Benchwarp
             FsmState idle = bench.LocateMyFSM("Bench Control").FsmStates.First(s => s.Name == "Idle");
             if (noninteractive)
             {
-                idle.Transitions = ArrayExtensions.Empty<FsmTransition>();
+                idle.Transitions = Array.Empty<FsmTransition>();
             }
             else
             {

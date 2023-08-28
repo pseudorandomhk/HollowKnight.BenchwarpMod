@@ -430,7 +430,7 @@ namespace Benchwarp
             {
                 sceneNamePanel.SetActive(true, false);
                 string sceneText = Events.GetSceneName(GameManager.instance.sceneName);
-                if (SilentInstances.HeroController != null)
+                if (HeroController.SilentInstance != null)
                 {
                     Vector2 heroPos = HeroController.instance.transform.position;
                     sceneText += $" {heroPos}";
@@ -462,7 +462,7 @@ namespace Benchwarp
             else sceneNamePanel.SetActive(false, true);
 
 
-            if (!Benchwarp.GS.ShowMenu || SilentInstances.HeroController == null || !GameManager.instance.IsGameplayScene() || !GameManager.instance.IsGamePaused())
+            if (!Benchwarp.GS.ShowMenu || HeroController.SilentInstance == null || !GameManager.instance.IsGameplayScene() || !GameManager.instance.IsGamePaused())
             {
                 if (rootPanel.active) rootPanel.SetActive(false, true);
                 return;
