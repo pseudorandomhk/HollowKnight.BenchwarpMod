@@ -65,8 +65,16 @@ namespace Benchwarp
         public bool IsInvalid() => door == null || room == null;
     }
 
-    public record Door(DoorTarget Self, DoorTarget Target, string Area, OneWay OneWay);
+    public record Door(DoorTarget Self, DoorTarget Target, string Area, OneWay OneWay)
+    {
+        public virtual bool Equals(Door other) => ReferenceEquals(this, other) ||
+            (other is not null && this.EqualityContract == other.EqualityContract && this.Self.Equals(other.Self) && this.Target.Equals(other.Target) &&
+            this.Area == other.Area && this.OneWay == other.OneWay);
 
+        public override int GetHashCode() => HashCode.Combine(EqualityContract.GetHashCode(), Self.GetHashCode(),
+            Target.GetHashCode(), Area?.GetHashCode(), OneWay.GetHashCode());
+    }
+    
     public static class DoorWarp
     {
         public static Door[] Doors;
@@ -130,7 +138,6 @@ namespace Benchwarp
                 "Howling Cliffs",
                 "Stag Nest",
                 "White Palace",
-                "Godhome",
                 "Stag",
                 "Tram"
             };

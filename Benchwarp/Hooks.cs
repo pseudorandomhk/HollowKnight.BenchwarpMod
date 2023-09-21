@@ -14,7 +14,7 @@ namespace Benchwarp
             ModHooks.GetPlayerStringHook += RespawnAtDeployedBench;
             ModHooks.SetPlayerStringHook += RemoveRespawnFromDeployedBench;
             // Imagine if GetPlayerIntHook actually worked
-            On.GameManager.OnNextLevelReady += FixRespawnType;
+            On.GameManager.BeginScene += FixRespawnType;
             On.PlayMakerFSM.OnEnable += OnEnableBenchFsm;
             Events.OnBenchwarp += ChangeScene.OnBenchwarpCleanup;
         }
@@ -26,7 +26,7 @@ namespace Benchwarp
             ModHooks.SetPlayerBoolHook -= BenchWatcher;
             ModHooks.GetPlayerStringHook -= RespawnAtDeployedBench;
             ModHooks.SetPlayerStringHook -= RemoveRespawnFromDeployedBench;
-            On.GameManager.OnNextLevelReady -= FixRespawnType;
+            On.GameManager.BeginScene -= FixRespawnType;
             On.PlayMakerFSM.OnEnable -= OnEnableBenchFsm;
             Events.OnBenchwarp -= ChangeScene.OnBenchwarpCleanup;
         }
@@ -76,8 +76,10 @@ namespace Benchwarp
                 _ => value,
             };
 
-        private static void FixRespawnType(On.GameManager.orig_OnNextLevelReady orig, GameManager self)
+        private static void FixRespawnType(On.GameManager.orig_BeginScene orig, GameManager self)
         {
+            orig(self);
+
             if (GameManager.instance.RespawningHero)
             {
                 Transform spawnPoint = HeroController.instance.LocateSpawnPoint();
@@ -91,8 +93,6 @@ namespace Benchwarp
                     PlayerData.instance.respawnType = 0;
                 }
             }
-
-            orig(self);
         }
 
         private static void OnEnableBenchFsm(On.PlayMakerFSM.orig_OnEnable orig, PlayMakerFSM fsm)

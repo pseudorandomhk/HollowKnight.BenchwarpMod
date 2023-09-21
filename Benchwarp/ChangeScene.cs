@@ -1,6 +1,7 @@
 ﻿using GlobalEnums;
 using Modding;
 using System.Collections;
+using Modding.Utils;
 using UnityEngine;
 
 namespace Benchwarp
@@ -59,9 +60,11 @@ namespace Benchwarp
                 HeroController.instance.cState.superDashing = false;
                 HeroController.instance.cState.spellQuake = false;
             }
-            GameManager.instance.ReadyForRespawn(false);
+            GameManager.instance.ReadyForRespawn();
 
-            yield return new WaitWhile(() => GameManager.instance.IsInSceneTransition);
+            yield return null;
+
+            HeroController.instance.transitionState = HeroTransitionState.WAITING_TO_TRANSITION;
 
             // Revert pause menu timescale
             Time.timeScale = 1f;
@@ -76,10 +79,10 @@ namespace Benchwarp
             {
                 HeroController.instance.UnPause();
             }
-            MenuButtonList.ClearAllLastSelected();
+            //MenuButtonList.ClearAllLastSelected();
 
             //This allows the next pause to stop the game correctly
-            TimeController.GenericTimeScale = 1f;
+            Time.timeScale = 1f;
 
             // Restores audio to normal levels. Unfortunately, some warps pop atm when music changes over
             GameManager.instance.actorSnapshotUnpaused.TransitionTo(0f);
@@ -91,7 +94,7 @@ namespace Benchwarp
             // reset some things not cleaned up when exiting dream sequences, etc
             if (HeroController.SilentInstance != null)
             {
-                HeroController.SilentInstance.takeNoDamage = false;
+                HeroController.SilentInstance.TakeNoDamage = false;
                 if (!BenchMaker.IsDreamRoom() && HeroController.SilentInstance.proxyFSM?.FsmVariables?.FindFsmBool("No Charms") is HutongGames.PlayMaker.FsmBool noCharms) noCharms.Value = false;
             }
             if (HutongGames.PlayMaker.FsmVariables.GlobalVariables.FindFsmBool("Is HUD Out") is HutongGames.PlayMaker.FsmBool hudOut && hudOut.Value)
@@ -112,15 +115,15 @@ namespace Benchwarp
             {
                 HeroController.instance.UnPause();
             }
-            MenuButtonList.ClearAllLastSelected();
-            TimeController.GenericTimeScale = 1f;
+            //MenuButtonList.ClearAllLastSelected();
+            Time.timeScale = 1f;
             GameManager.instance.actorSnapshotUnpaused.TransitionTo(0f);
             GameManager.instance.ui.AudioGoToGameplay(.2f);
             if (HeroController.SilentInstance != null)
             {
                 HeroController.instance.UnPause();
             }
-            MenuButtonList.ClearAllLastSelected();
+            //MenuButtonList.ClearAllLastSelected();
             PlayerData.instance.atBench = false; // kill bench storage
             if (HeroController.SilentInstance != null)
             {
@@ -135,41 +138,24 @@ namespace Benchwarp
                 HeroController.instance.cState.nearBench = false;
             }
 
-            SceneLoad load = ReflectionHelper.GetField<GameManager, SceneLoad>(GameManager.instance, "sceneLoad");
-            if (load != null)
-            {
-                load.Finish += () =>
-                {
-                    LoadScene(sceneName, gateName, delay);
-                };
-            }
-            else
-            {
-                LoadScene(sceneName, gateName, delay);
-            }
+            LoadScene(sceneName, gateName, delay);
         }
 
         private static void LoadScene(string sceneName, string gateName, float delay)
         {
             GameManager.instance.StopAllCoroutines();
-            ReflectionHelper.SetField<GameManager, SceneLoad>(GameManager.instance, "sceneLoad", null);
-
-            GameManager.instance.BeginSceneTransition(new DoorwarpSceneLoadInfo
+            
+            GameManager.instance.ChangeToSceneWithInfo(new DoorwarpSceneLoadInfo
             {
-                IsFirstLevelForPlayer = false,
                 SceneName = sceneName,
                 HeroLeaveDirection = GetGatePosition(gateName),
                 EntryGateName = gateName,
-                EntryDelay = delay,
-                PreventCameraFadeOut = false,
-                WaitForSceneTransitionCameraFade = true,
-                Visualization = GameManager.SceneLoadVisualizations.Default,
-                AlwaysUnloadUnusedAssets = false
+                EntryDelay = delay
             });
         }
 
         // Some mods (ItemChanger) check type to detect vanilla scene loads.
-        private class DoorwarpSceneLoadInfo : GameManager.SceneLoadInfo 
+        private class DoorwarpSceneLoadInfo : GameManager.SceneLoadInfo
         {
         }
 

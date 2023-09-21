@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Modding.Utils;
+using UnityEngine;
+using static Shims.NET.System.IO.Stream;
 
 namespace Benchwarp
 {

@@ -31,8 +31,8 @@
   },
   {
     "Self": "Tutorial_01[top1]",
-    "Area": "King's Pass",
-    "OneWay": "Out"
+    "Target": "Cliffs_02[bot2]",
+    "Area": "King's Pass"
   },
   {
     "Self": "Tutorial_01[top2]",
@@ -56,8 +56,8 @@
   },
   {
     "Self": "Town[top1]",
-    "Area": "Dirtmouth",
-    "OneWay": "Out"
+    "Target": "Cliffs_02[right1]",
+    "Area": "Dirtmouth"
   },
   {
     "Self": "Town[door_station]",
@@ -82,16 +82,6 @@
   {
     "Self": "Town[door_bretta]",
     "Target": "Room_Bretta[right1]",
-    "Area": "Dirtmouth"
-  },
-  {
-    "Self": "Town[room_divine]",
-    "Target": "Grimm_Divine[left1]",
-    "Area": "Dirtmouth"
-  },
-  {
-    "Self": "Town[room_grimm]",
-    "Target": "Grimm_Main_Tent[left1]",
     "Area": "Dirtmouth"
   },
   {
@@ -125,16 +115,6 @@
     "Area": "Misc"
   },
   {
-    "Self": "Room_Bretta[door1]",
-    "Target": "Room_Bretta_Basement[top1]",
-    "Area": "Misc"
-  },
-  {
-    "Self": "Room_Bretta_Basement[top1]",
-    "Target": "Room_Bretta[door1]",
-    "Area": "Misc"
-  },
-  {
     "Self": "Room_Ouiji[left1]",
     "Target": "Town[door_jiji]",
     "Area": "Misc"
@@ -142,16 +122,6 @@
   {
     "Self": "Room_Jinn[left1]",
     "Target": "Town[door_jiji]",
-    "Area": "Misc"
-  },
-  {
-    "Self": "Grimm_Divine[left1]",
-    "Target": "Town[room_divine]",
-    "Area": "Misc"
-  },
-  {
-    "Self": "Grimm_Main_Tent[left1]",
-    "Target": "Town[room_grimm]",
     "Area": "Misc"
   },
   {
@@ -1632,8 +1602,7 @@
   {
     "Self": "Fungus2_30[bot1]",
     "Target": "Fungus2_25[top2]",
-    "Area": "Fungal Core",
-    "OneWay": "In"
+    "Area": "Fungal Core"
   },
   {
     "Self": "Fungus2_30[top1]",
@@ -1673,8 +1642,7 @@
   {
     "Self": "Deepnest_01[bot2]",
     "Target": "Deepnest_01b[top2]",
-    "Area": "Fungal Wastes",
-    "OneWay": "In"
+    "Area": "Fungal Wastes"
   },
   {
     "Self": "Deepnest_01[left1]",
@@ -1688,8 +1656,8 @@
   },
   {
     "Self": "Deepnest_01b[top2]",
-    "Area": "Deepnest",
-    "OneWay": "Out"
+    "Target": "Deepnest_01[bot2]",
+    "Area": "Deepnest"
   },
   {
     "Self": "Deepnest_01b[right1]",
@@ -1838,23 +1806,13 @@
   },
   {
     "Self": "Fungus2_25[top2]",
-    "Area": "Deepnest",
-    "OneWay": "Out"
+    "Target": "Fungus2_30[bot1]",
+    "Area": "Deepnest"
   },
   {
     "Self": "Fungus2_25[right1]",
     "Target": "Fungus2_15[left1]",
     "Area": "Deepnest"
-  },
-  {
-    "Self": "Deepnest_26[left1]",
-    "Target": "Deepnest_26b[right1]",
-    "Area": "Failed Tramway"
-  },
-  {
-    "Self": "Deepnest_26[left2]",
-    "Target": "Deepnest_26b[right2]",
-    "Area": "Failed Tramway"
   },
   {
     "Self": "Deepnest_26[right1]",
@@ -1864,16 +1822,6 @@
   {
     "Self": "Deepnest_26[bot1]",
     "Target": "Deepnest_35[top1]",
-    "Area": "Failed Tramway"
-  },
-  {
-    "Self": "Deepnest_26b[right2]",
-    "Target": "Deepnest_26[left2]",
-    "Area": "Failed Tramway"
-  },
-  {
-    "Self": "Deepnest_26b[right1]",
-    "Target": "Deepnest_26[left1]",
     "Area": "Failed Tramway"
   },
   {
@@ -2073,7 +2021,7 @@
   },
   {
     "Self": "Deepnest_East_01[right1]",
-    "Target": "Hive_03_c[left1]",
+    "Target": "Hive_03[left1]",
     "Area": "Kingdom's Edge"
   },
   {
@@ -2118,8 +2066,8 @@
   },
   {
     "Self": "Deepnest_East_03[top2]",
-    "Area": "Kingdom's Edge",
-    "OneWay": "Out"
+    "Target": "Deepnest_East_07[bot2]",
+    "Area": "Kingdom's Edge"
   },
   {
     "Self": "Deepnest_East_03[right1]",
@@ -2163,7 +2111,7 @@
   },
   {
     "Self": "Deepnest_East_06[bot1]",
-    "Target": "Deepnest_East_14b[top1]",
+    "Target": "Deepnest_East_14[top1]",
     "Area": "Kingdom's Edge"
   },
   {
@@ -2184,8 +2132,7 @@
   {
     "Self": "Deepnest_East_07[bot2]",
     "Target": "Deepnest_East_03[top2]",
-    "Area": "Kingdom's Edge",
-    "OneWay": "In"
+    "Area": "Kingdom's Edge"
   },
   {
     "Self": "Deepnest_East_07[left1]",
@@ -2194,7 +2141,7 @@
   },
   {
     "Self": "Deepnest_East_07[left2]",
-    "Target": "Ruins2_11_b[right1]",
+    "Target": "Ruins2_11[right1]",
     "Area": "Kingdom's Edge"
   },
   {
@@ -2273,22 +2220,12 @@
     "Area": "Kingdom's Edge"
   },
   {
-    "Self": "Deepnest_East_14[left1]",
-    "Target": "Deepnest_East_14b[right1]",
-    "Area": "Kingdom's Edge"
-  },
-  {
     "Self": "Deepnest_East_14[door1]",
     "Target": "Deepnest_East_17[left1]",
     "Area": "Kingdom's Edge"
   },
   {
-    "Self": "Deepnest_East_14b[right1]",
-    "Target": "Deepnest_East_14[left1]",
-    "Area": "Kingdom's Edge"
-  },
-  {
-    "Self": "Deepnest_East_14b[top1]",
+    "Self": "Deepnest_East_14[top1]",
     "Target": "Deepnest_East_06[bot1]",
     "Area": "Kingdom's Edge"
   },
@@ -2348,11 +2285,6 @@
     "Area": "Cast Off Shell"
   },
   {
-    "Self": "GG_Lurker[left1]",
-    "Target": "Room_Colosseum_Spectate[right1]",
-    "Area": "Kingdom's Edge"
-  },
-  {
     "Self": "Hive_01[left1]",
     "Target": "Abyss_03_c[right1]",
     "Area": "Hive"
@@ -2369,7 +2301,7 @@
   },
   {
     "Self": "Hive_02[left1]",
-    "Target": "Hive_03_c[right3]",
+    "Target": "Hive_03[right3]",
     "Area": "Hive"
   },
   {
@@ -2383,28 +2315,18 @@
     "Area": "Hive"
   },
   {
-    "Self": "Hive_03_c[left1]",
+    "Self": "Hive_03[left1]",
     "Target": "Deepnest_East_01[right1]",
     "Area": "Hive"
   },
   {
-    "Self": "Hive_03_c[right2]",
+    "Self": "Hive_03[right2]",
     "Target": "Hive_04[left2]",
     "Area": "Hive"
   },
   {
-    "Self": "Hive_03_c[right3]",
+    "Self": "Hive_03[right3]",
     "Target": "Hive_02[left1]",
-    "Area": "Hive"
-  },
-  {
-    "Self": "Hive_03_c[top1]",
-    "Target": "Hive_03[bot1]",
-    "Area": "Hive"
-  },
-  {
-    "Self": "Hive_03[bot1]",
-    "Target": "Hive_03_c[top1]",
     "Area": "Hive"
   },
   {
@@ -2424,7 +2346,7 @@
   },
   {
     "Self": "Hive_04[left2]",
-    "Target": "Hive_03_c[right2]",
+    "Target": "Hive_03[right2]",
     "Area": "Hive"
   },
   {
@@ -2460,11 +2382,6 @@
   {
     "Self": "Room_Colosseum_Spectate[bot1]",
     "Target": "Room_Colosseum_02[top2]",
-    "Area": "Colosseum"
-  },
-  {
-    "Self": "Room_Colosseum_Spectate[right1]",
-    "Target": "GG_Lurker[left1]",
     "Area": "Colosseum"
   },
   {
@@ -2555,11 +2472,6 @@
   {
     "Self": "Abyss_05[left1]",
     "Target": "Abyss_04[right1]",
-    "Area": "Palace Grounds"
-  },
-  {
-    "Self": "Abyss_05[right1]",
-    "Target": "Abyss_22[left1]",
     "Area": "Palace Grounds"
   },
   {
@@ -2691,11 +2603,6 @@
     "Self": "Abyss_21[right1]",
     "Target": "Abyss_19[left1]",
     "Area": "Ancient Basin"
-  },
-  {
-    "Self": "Abyss_22[left1]",
-    "Target": "Abyss_05[right1]",
-    "Area": "Palace Grounds"
   },
   {
     "Self": "Abyss_Lighthouse_room[left1]",
@@ -2848,11 +2755,6 @@
     "Area": "Royal Waterways"
   },
   {
-    "Self": "Waterways_08[left2]",
-    "Target": "GG_Pipeway[right1]",
-    "Area": "Royal Waterways"
-  },
-  {
     "Self": "Waterways_09[right1]",
     "Target": "Waterways_04b[left1]",
     "Area": "Royal Waterways"
@@ -2893,36 +2795,6 @@
     "Area": "Royal Waterways"
   },
   {
-    "Self": "GG_Pipeway[right1]",
-    "Target": "Waterways_08[left2]",
-    "Area": "Royal Waterways"
-  },
-  {
-    "Self": "GG_Pipeway[left1]",
-    "Target": "GG_Waterways[right1]",
-    "Area": "Royal Waterways"
-  },
-  {
-    "Self": "GG_Waterways[right1]",
-    "Target": "GG_Pipeway[left1]",
-    "Area": "Junk Pit"
-  },
-  {
-    "Self": "GG_Waterways[door1]",
-    "Target": "Room_GG_Shortcut[left1]",
-    "Area": "Junk Pit"
-  },
-  {
-    "Self": "Room_GG_Shortcut[left1]",
-    "Target": "GG_Waterways[door1]",
-    "Area": "Junk Pit"
-  },
-  {
-    "Self": "Room_GG_Shortcut[top1]",
-    "Target": "Ruins1_04[bot1]",
-    "Area": "Junk Pit"
-  },
-  {
     "Self": "Ruins1_01[left1]",
     "Target": "Fungus2_21[right1]",
     "Area": "City of Tears"
@@ -2959,7 +2831,7 @@
   },
   {
     "Self": "Ruins1_03[right1]",
-    "Target": "Ruins1_05c[left2]",
+    "Target": "Ruins1_05[left2]",
     "Area": "City of Tears"
   },
   {
@@ -2978,18 +2850,13 @@
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins1_04[bot1]",
-    "Target": "Room_GG_Shortcut[top1]",
-    "Area": "City of Tears"
-  },
-  {
     "Self": "Ruins1_05b[left1]",
     "Target": "Ruins1_03[right2]",
     "Area": "City of Tears"
   },
   {
     "Self": "Ruins1_05b[top1]",
-    "Target": "Ruins1_05c[bot1]",
+    "Target": "Ruins1_05[bot1]",
     "Area": "City of Tears"
   },
   {
@@ -3003,43 +2870,13 @@
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins1_05c[left2]",
+    "Self": "Ruins1_05[left2]",
     "Target": "Ruins1_03[right1]",
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins1_05c[bot1]",
-    "Target": "Ruins1_05b[top1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_05c[top1]",
-    "Target": "Ruins1_05[bot1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_05c[top2]",
-    "Target": "Ruins1_05[bot2]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_05c[top3]",
-    "Target": "Ruins1_05[bot3]",
-    "Area": "City of Tears"
-  },
-  {
     "Self": "Ruins1_05[bot1]",
-    "Target": "Ruins1_05c[top1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_05[bot2]",
-    "Target": "Ruins1_05c[top2]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_05[bot3]",
-    "Target": "Ruins1_05c[top3]",
+    "Target": "Ruins1_05b[top1]",
     "Area": "City of Tears"
   },
   {
@@ -3099,7 +2936,7 @@
   },
   {
     "Self": "Ruins1_18[right1]",
-    "Target": "Ruins2_03b[left1]",
+    "Target": "Ruins2_03[left1]",
     "Area": "City of Tears"
   },
   {
@@ -3174,7 +3011,7 @@
   },
   {
     "Self": "Ruins1_27[right1]",
-    "Target": "Ruins2_01_b[left1]",
+    "Target": "Ruins2_01[left1]",
     "Area": "City of Tears"
   },
   {
@@ -3228,28 +3065,8 @@
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins1_31[left2]",
-    "Target": "Ruins1_31b[right1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_31[left3]",
-    "Target": "Ruins1_31b[right2]",
-    "Area": "City of Tears"
-  },
-  {
     "Self": "Ruins1_31[right1]",
     "Target": "Ruins1_23[left1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_31b[right1]",
-    "Target": "Ruins1_31[left2]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins1_31b[right2]",
-    "Target": "Ruins1_31[left3]",
     "Area": "City of Tears"
   },
   {
@@ -3269,12 +3086,7 @@
   },
   {
     "Self": "Ruins2_01[top1]",
-    "Target": "Ruins2_03b[bot1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins2_01[bot1]",
-    "Target": "Ruins2_01_b[top1]",
+    "Target": "Ruins2_03[bot1]",
     "Area": "City of Tears"
   },
   {
@@ -3283,37 +3095,22 @@
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins2_01_b[top1]",
-    "Target": "Ruins2_01[bot1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins2_01_b[left1]",
+    "Self": "Ruins2_01[left1]",
     "Target": "Ruins1_27[right1]",
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins2_01_b[right1]",
+    "Self": "Ruins2_01[right1]",
     "Target": "Ruins2_04[left1]",
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins2_03b[top1]",
-    "Target": "Ruins2_03[bot1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins2_03b[top2]",
-    "Target": "Ruins2_03[bot2]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins2_03b[left1]",
+    "Self": "Ruins2_03[left1]",
     "Target": "Ruins1_18[right1]",
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins2_03b[bot1]",
+    "Self": "Ruins2_03[bot1]",
     "Target": "Ruins2_01[top1]",
     "Area": "City of Tears"
   },
@@ -3323,18 +3120,8 @@
     "Area": "City of Tears"
   },
   {
-    "Self": "Ruins2_03[bot1]",
-    "Target": "Ruins2_03b[top1]",
-    "Area": "City of Tears"
-  },
-  {
-    "Self": "Ruins2_03[bot2]",
-    "Target": "Ruins2_03b[top2]",
-    "Area": "City of Tears"
-  },
-  {
     "Self": "Ruins2_04[left1]",
-    "Target": "Ruins2_01_b[right1]",
+    "Target": "Ruins2_01[right1]",
     "Area": "City of Tears"
   },
   {
@@ -3424,7 +3211,7 @@
   },
   {
     "Self": "Ruins2_07[top1]",
-    "Target": "Ruins2_11_b[bot1]",
+    "Target": "Ruins2_11[bot1]",
     "Area": "King's Station"
   },
   {
@@ -3473,23 +3260,13 @@
     "Area": "King's Station"
   },
   {
-    "Self": "Ruins2_11_b[right1]",
+    "Self": "Ruins2_11[right1]",
     "Target": "Deepnest_East_07[left2]",
     "Area": "Tower of Love"
   },
   {
-    "Self": "Ruins2_11_b[left1]",
-    "Target": "Ruins2_11[right1]",
-    "Area": "Tower of Love"
-  },
-  {
-    "Self": "Ruins2_11_b[bot1]",
+    "Self": "Ruins2_11[bot1]",
     "Target": "Ruins2_07[top1]",
-    "Area": "Tower of Love"
-  },
-  {
-    "Self": "Ruins2_11[right1]",
-    "Target": "Ruins2_11_b[left1]",
     "Area": "Tower of Love"
   },
   {
@@ -3554,8 +3331,8 @@
   },
   {
     "Self": "RestingGrounds_02[top1]",
-    "Area": "Resting Grounds",
-    "OneWay": "Out"
+    "Target": "Mines_28[bot1]",
+    "Area": "Resting Grounds"
   },
   {
     "Self": "RestingGrounds_04[left1]",
@@ -3814,8 +3591,8 @@
   },
   {
     "Self": "Mines_13[top1]",
-    "Area": "Crystal Peak",
-    "OneWay": "Out"
+    "Target": "Mines_34[left1]",
+    "Area": "Crystal Peak"
   },
   {
     "Self": "Mines_13[bot1]",
@@ -3909,8 +3686,8 @@
   },
   {
     "Self": "Mines_23[top1]",
-    "Area": "Crystal Peak",
-    "OneWay": "Out"
+    "Target": "Mines_34[bot2]",
+    "Area": "Crystal Peak"
   },
   {
     "Self": "Mines_24[left1]",
@@ -3935,8 +3712,7 @@
   {
     "Self": "Mines_28[bot1]",
     "Target": "RestingGrounds_02[top1]",
-    "Area": "Crystal Peak",
-    "OneWay": "In"
+    "Area": "Crystal Peak"
   },
   {
     "Self": "Mines_28[door1]",
@@ -3996,14 +3772,12 @@
   {
     "Self": "Mines_34[bot2]",
     "Target": "Mines_23[top1]",
-    "Area": "Hallownest's Crown",
-    "OneWay": "In"
+    "Area": "Hallownest's Crown"
   },
   {
     "Self": "Mines_34[left1]",
     "Target": "Mines_13[top1]",
-    "Area": "Hallownest's Crown",
-    "OneWay": "In"
+    "Area": "Hallownest's Crown"
   },
   {
     "Self": "Mines_35[left1]",
@@ -4246,15 +4020,9 @@
     "Area": "Howling Cliffs"
   },
   {
-    "Self": "Cliffs_01[right4]",
-    "Target": "Cliffs_06[left1]",
-    "Area": "Howling Cliffs"
-  },
-  {
     "Self": "Cliffs_02[right1]",
     "Target": "Town[top1]",
-    "Area": "Howling Cliffs",
-    "OneWay": "In"
+    "Area": "Howling Cliffs"
   },
   {
     "Self": "Cliffs_02[bot1]",
@@ -4264,8 +4032,7 @@
   {
     "Self": "Cliffs_02[bot2]",
     "Target": "Tutorial_01[top1]",
-    "Area": "Howling Cliffs",
-    "OneWay": "In"
+    "Area": "Howling Cliffs"
   },
   {
     "Self": "Cliffs_02[door1]",
@@ -4300,11 +4067,6 @@
   {
     "Self": "Cliffs_05[left1]",
     "Target": "Cliffs_04[right1]",
-    "Area": "Howling Cliffs"
-  },
-  {
-    "Self": "Cliffs_06[left1]",
-    "Target": "Cliffs_01[right4]",
     "Area": "Howling Cliffs"
   },
   {
@@ -4498,93 +4260,6 @@
     "Area": "White Palace"
   },
   {
-    "Self": "White_Palace_17[right1]",
-    "Target": "White_Palace_19[left1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "White_Palace_17[bot1]",
-    "Target": "White_Palace_18[top1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "White_Palace_18[top1]",
-    "Target": "White_Palace_17[bot1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "White_Palace_18[right1]",
-    "Target": "White_Palace_06[left1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "White_Palace_19[top1]",
-    "Target": "White_Palace_20[bot1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "White_Palace_19[left1]",
-    "Target": "White_Palace_17[right1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "White_Palace_20[bot1]",
-    "Target": "White_Palace_19[top1]",
-    "Area": "White Palace"
-  },
-  {
-    "Self": "GG_Atrium[top1]",
-    "Target": "GG_Atrium_Roof[bot1]",
-    "Area": "Godhome",
-    "OneWay": "In"
-  },
-  {
-    "Self": "GG_Atrium[top2]",
-    "Target": "GG_Atrium_Roof[bot2]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Atrium[Door_Workshop]",
-    "Target": "GG_Workshop[left1]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Atrium[door1_blueRoom]",
-    "Target": "GG_Blue_Room[left1]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Atrium_Roof[bot1]",
-    "Target": "GG_Atrium[top1]",
-    "Area": "Godhome",
-    "OneWay": "Out"
-  },
-  {
-    "Self": "GG_Atrium_Roof[bot2]",
-    "Target": "GG_Atrium[top2]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Atrium_Roof[door_Land_of_Storms]",
-    "Target": "GG_Land_of_Storms[door1]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Workshop[left1]",
-    "Target": "GG_Atrium[Door_Workshop]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Blue_Room[left1]",
-    "Target": "GG_Atrium[door1_blueRoom]",
-    "Area": "Godhome"
-  },
-  {
-    "Self": "GG_Land_of_Storms[door1]",
-    "Target": "GG_Atrium_Roof[door_Land_of_Storms]",
-    "Area": "Godhome"
-  },
-  {
     "Self": "Room_Town_Stag_Station[door_stagExit]",
     "Area": "Stag",
     "OneWay": "Out"
@@ -4626,11 +4301,6 @@
   },
   {
     "Self": "Deepnest_09[door_stagExit]",
-    "Area": "Stag",
-    "OneWay": "Out"
-  },
-  {
-    "Self": "Abyss_22[door_stagExit]",
     "Area": "Stag",
     "OneWay": "Out"
   },

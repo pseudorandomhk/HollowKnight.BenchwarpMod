@@ -350,48 +350,6 @@
     }
   },
   {
-    "name": "Godhome Atrium",
-    "areaName": "Waterways",
-    "sceneName": "GG_Atrium",
-    "respawnMarker": "RestBench",
-    "respawnType": 1,
-    "mapZone": "GODS_GLORY",
-    "style": "Wide",
-    "specificOffset": {
-      "x": 0.0,
-      "y": -0.68,
-      "z": 0.0
-    }
-  },
-  {
-    "name": "Godhome Roof",
-    "areaName": "Waterways",
-    "sceneName": "GG_Atrium_Roof",
-    "respawnMarker": "RestBench (1)",
-    "respawnType": 1,
-    "mapZone": "GODS_GLORY",
-    "style": "Gold",
-    "specificOffset": {
-      "x": 0.0,
-      "y": -0.7,
-      "z": 0.0
-    }
-  },
-  {
-    "name": "Hall of Gods",
-    "areaName": "Waterways",
-    "sceneName": "GG_Workshop",
-    "respawnMarker": "RestBench (1)",
-    "respawnType": 1,
-    "mapZone": "GODS_GLORY",
-    "style": "Wide",
-    "specificOffset": {
-      "x": 0.0,
-      "y": -0.68,
-      "z": 0.0
-    }
-  },
-  {
     "name": "Hot Springs",
     "areaName": "Deepnest",
     "sceneName": "Deepnest_30",
@@ -444,20 +402,6 @@
     "specificOffset": {
       "x": 0.0,
       "y": 0.46,
-      "z": 0.0
-    }
-  },
-  {
-    "name": "Hidden Station",
-    "areaName": "Basin",
-    "sceneName": "Abyss_22",
-    "respawnMarker": "RestBench",
-    "respawnType": 1,
-    "mapZone": "ABYSS",
-    "style": "Left",
-    "specificOffset": {
-      "x": 0.0,
-      "y": -0.68,
       "z": 0.0
     }
   },

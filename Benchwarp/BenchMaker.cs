@@ -1,4 +1,5 @@
 ﻿using HutongGames.PlayMaker;
+using Modding.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,7 +46,7 @@ namespace Benchwarp
             FsmState idle = bench.LocateMyFSM("Bench Control").FsmStates.First(s => s.Name == "Idle");
             if (noninteractive)
             {
-                idle.Transitions = Array.Empty<FsmTransition>();
+                idle.Transitions = Shims.NET.System.Array.Empty<FsmTransition>();
             }
             else
             {
@@ -55,7 +56,7 @@ namespace Benchwarp
                     new FsmTransition
                     {
                         FsmEvent = FsmEvent.GetFsmEvent("IN RANGE"),
-                        ToFsmState = idle.Fsm.States.FirstOrDefault(f => f.Name == "In Range"),
+                        // ToFsmState = idle.Fsm.States.FirstOrDefault(f => f.Name == "In Range"),
                         ToState = "In Range",
                     }
                 };
@@ -65,10 +66,10 @@ namespace Benchwarp
         public static void RemoveSaveRespawnActions(GameObject bench)
         {
             FsmState restBurst = bench.LocateMyFSM("Bench Control").FsmStates.First(s => s.Name == "Rest Burst");
-            if (restBurst.Actions.Length < 27) return;
+            if (restBurst.Actions.Length < 21) return;
 
             List<FsmStateAction> actions = restBurst.Actions.ToList();
-            actions.RemoveRange(19, 8);
+            actions.RemoveRange(11, 6);
             actions.Add(new FsmLambda(() => Benchwarp.LS.atDeployedBench = true));
             restBurst.Actions = actions.ToArray();
         }
@@ -115,8 +116,8 @@ namespace Benchwarp
             return GameManager.instance.sm.mapZone switch
             {
                 GlobalEnums.MapZone.DREAM_WORLD
-                or GlobalEnums.MapZone.GODS_GLORY
-                or GlobalEnums.MapZone.GODSEEKER_WASTE
+                //or GlobalEnums.MapZone.GODS_GLORY
+                //or GlobalEnums.MapZone.GODSEEKER_WASTE
                 or GlobalEnums.MapZone.WHITE_PALACE => true,
                 _ => false,
             };
